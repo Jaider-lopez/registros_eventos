@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Novedades La Ceja</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <ul>
+        <a href="/index.html">Novedades</a>
+    </ul>
+
+    <form method="post">
+        <div>
+            <H1>REPORTE DIARIO CMC LA CEJA</H1>
+            <div class="Novedades">
+                <input type="text" name="Nombre" placeholder="Nombre">
+                <input type="number" name="Telefono" placeholder="Telefono" required>
+                <div class="TipoNovedad">
+                    <select id="SeleccioneNovedad" name="SeleccioneNovedad" style="margin: 50px;"
+                        onchange="MostrarCampo()">
+                        <option value="evento">SELECCIONA LA NOVEDAD</option>
+                        <option value="979">979 - Recuperacion de elementos</option>
+                        <option value="Otro">Otro</option>
+                    </select>
+                    <div id="eventoManualContainer">
+                        <label for="eventoManual">Escribe el evento:</label>
+                        <input type="text" id="eventoManual" name="eventoManual"
+                            style="width: auto; margin: auto; width: 400px;"
+                            placeholder="Nombre del evento">
+                    </div>
+                    <br>
+                    <input type="date" required>
+                    <p>Hora Recepcion De Llamada</p>
+                    <input type="time" required>
+                    <p>Hora Atencion Del Evento</p>
+                    <input type="time">
+                    <p>Direccion</p>
+                    <input type="text" name="Direccion" placeholder="Direccion" required>
+                    <p>Descripcion</p>
+                    <div class="form input"> <textarea placeholder="Describe El Caso" required></textarea></div>
+                    <input type="text" name="nombre" placeholder="Atendido Por" required>
+                    <input type="text" name="nombre" placeholder="Operador Responsable" required>
+
+                </div>
+            </div>
+        </div>
+        <button class="buttonguardar">GUARDAR</button>
+    </form>
+    <script>
+        function MostrarCampo() {
+            const seleccion = document.getElementById('SeleccioneNovedad').value;
+            const contenedor = document.getElementById('eventoManualContainer');
+            //contenedor.style.display = (seleccion === 'Otro') ? 'block' : 'none';
+
+
+            if (seleccion == "Otro") {
+                contenedor.style.display = "block"
+            } else {
+                contenedor.style.display = "none"
+            }
+
+
+        }
+    </script>
+
+</body>
+
+</html>
