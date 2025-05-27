@@ -61,11 +61,6 @@ p{
 
 }
 
-ul{
-    padding:40px;
-    color: blue;
-    text-align: right;
+.no_underline{
+    text-decoration: none;
 }
-
-
-
