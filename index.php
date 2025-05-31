@@ -30,8 +30,11 @@
     <ul>
         <a href="/login.html/login.html/iniciosesion.html" class="no_underline">cerrar sesion</a>
     </ul>
+<?php
+    include "mostrar.php"
+    ?>
 
-
+  
 </body>
 
 </html>
