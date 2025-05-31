@@ -2,7 +2,7 @@
 
 $inc = include("con_bd_tabla");
 if ($inc) { 
-    $consulta = "SELECT * FROM INCIDENTES_LA_CEJA";
+    $consulta = "SELECT * FROM registro_de_eventos";
     $resultado = mysqli_query($conex,$consulta);
     if ($resultado) {
         while($row = $resultado->fetch_array()){
@@ -26,7 +26,7 @@ if ($inc) {
             <div>
                <h2><?php echo $NOMBRE; ?></h2>
                 <div>
-                    <>
+                    <p>
                         <b>ID: </b> <?php echo $ID; ?><br>
                         <b>TELEFONO: </b> <?php echo $TELEFONO; ?> <br>
                         <b>EVENTO: </b> <?php echo $EVENTO; ?> <br>
