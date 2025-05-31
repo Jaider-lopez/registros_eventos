@@ -1,68 +1,9 @@
-
-h1{
-    margin: center;
-    padding: x;
-}
-
-#eventoManualContainer{
-    display: none; /* Oculto al inicio */
-      margin-top: 10px;
-      width: 300px;
- }
-
-div{
-    padding: 30px;
-}
-
-
-
-input{
-    border-radius: 4px;
-    background-position: center;
-    text-align:left;
-    letter-spacing: 1.5px;
-    padding: 20px;
-    margin: 50px 20px 15px 50px;
-    width: 250px;
-    
-}
-
-div form input{
-    border-radius: 4px;
-    background-position: center;
-    text-align:left;
-    letter-spacing: 1.5px;
-    padding: 10px;
-    margin: 50px 20px 15px 50px;
-    
-    width: 40px;
-}
-
-textarea{
-    min-width: 70%;
-    margin: 50px 20px 15px 50px;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    text-align: center;
-    border-radius: 4px;
-    padding: 30px;
-}
-
-p{
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; font-size: 150%;
-    padding: center;
-    word-spacing: 1.5px;
-}
-
-.buttonguardar{
-    padding: 20px;
-    border-radius: 15px;
-    margin-left: 650px;
-    cursor: pointer;
-    width: 150px;
-
-}
-
 .no_underline{
     text-decoration: none;
 }
 
+h1{
+    margin: 20px;
+    padding: 40px;
+    display: center;
+}
