@@ -7,16 +7,16 @@ if ($inc) {
     if ($resultado) {
         while($row = $resultado->fetch_array()){
             $ID = $row ["ID"];
-            $NOMBRE = $row ["NOMBRE"];
-            $TELEFONO = $row ["TELEFONO"];
-            $EVENTO = $row ["EVENTO"];
-            $FECHA = $row ["FECHA"];
-            $HORA_RECEPCION = $row ["HORA_RECEPCION"];
-            $HORA_ATENCION = $row ["HORA_ATENCION"];
-            $DIRECCION = $row ["DIRECCION"];
-            $DESCRIPCION = $row ["DESCRIPCION"];
-            $ENTIDAD = $row ["ENTIDAD"];
-            $OPERADOR_RESPONSABLE = $row ["OPERADOR_RESPONSABLE"];
+            $Nombre = $row ["Nombre"];
+            $Telefono = $row ["Telefono"];
+            $Seleccione_Novedad = $row ["Seleccione_Novedad"];
+            $Fecha = $row ["Fecha"];
+            $Hora_Recepcion = $row ["Hora_Recepcion"];
+            $Hora_atencion = $row ["Hora_Atencion"];
+            $Direccion = $row ["Direccion"];
+            $Descripcion = $row ["Descripcion"];
+            $Entidad = $row ["Entidad"];
+            $Operador_Responsable = $row ["Operador_Responsable"];
                }
     }
 }
@@ -28,15 +28,15 @@ if ($inc) {
                 <div>
                     <p>
                         <b>ID: </b> <?php echo $ID; ?><br>
-                        <b>TELEFONO: </b> <?php echo $TELEFONO; ?> <br>
-                        <b>EVENTO: </b> <?php echo $EVENTO; ?> <br>
-                        <b>FECHA: </b> <?php echo $FECHA; ?> <br>
-                        <b>HORA_RECEPCION: </b> <?php echo $HORA_RECEPCION; ?><br>
-                        <b>HORA_ATENCION: </b> <?php echo $HORA_ATENCION; ?> <br>
-                        <b>DIRECCION: </b> <?php echo $DIRECCION; ?> <br>
-                        <b>DESCRIPCION: </b> <?php echo $DESCRIPCION; ?><br>
-                        <b>ENTIDAD: </b> <?php echo $ENTIDAD; ?> <br>
-                        <b>OPERADOR_RESPONSABLE: </b> <?php echo $OPERADOR_RESPONSABLE; ?> <br>
+                        <b>Telefono : </b> <?php echo $Telefono; ?> <br>
+                        <b>Seleccione_Novedad: </b> <?php echo $Seleccione_Novedad; ?> <br>
+                        <b>Fecha: </b> <?php echo $Fecha; ?> <br>
+                        <b>Hora_Recepcion: </b> <?php echo $Hora_Recepcion; ?><br>
+                        <b>Hora_atencion: </b> <?php echo $Hora_atencion; ?> <br>
+                        <b>Direccion: </b> <?php echo $Direccion; ?> <br>
+                        <b>Descripcion: </b> <?php echo $Descripcion; ?> <br>
+                        <b>Entidad: </b> <?php echo $Entidad; ?> <br>
+                        <b>Operador_Responsable: </b> <?php echo $Operador_Responsable; ?> <br>
                     </p>
                 </div>
             </div>

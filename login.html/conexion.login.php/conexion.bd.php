@@ -1,6 +1,6 @@
 <?php 
 
-$conexion=new mysqli_query("")
+$conexion= mysqli_connect("localhost", "root", "", "registros_la_ceja");
 
 
 ?>

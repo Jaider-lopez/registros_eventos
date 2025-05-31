@@ -66,35 +66,21 @@ h1{
     width: 100px;
     height: 35px;
     background-color: rgb(169, 205, 193);
-    display: flex;
     align-items: center;
     justify-content: center;
-    margin-left: 60px;
+    margin-left: 45px;
     border-radius: 20px;
     margin-top: 66px;
     cursor: pointer;
 }
 
-.btn2{
-    width: 100px;
-    height: 35px;
-    background-color: rgb(169, 205, 193);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: absolute;
-    right: 80px;
-    top: 329.5px; 
-    border-radius: 20px;
-    cursor: pointer;
-   
-}
+
 
 .remember{
     display: flex;
     justify-content: center;
     margin: center;
-    padding: 20px;
+    padding: 30px;
     text-decoration: underline;
     
 }
