@@ -1,0 +1,19 @@
+.no_underline{
+    text-decoration: none;
+}
+
+h1{
+    margin: 20px;
+    padding-top: 10px;
+    display: center;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: url('/images/img.login.jpg');
+    background-size: cover;
+    background-position: center;
+}

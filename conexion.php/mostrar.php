@@ -2,21 +2,21 @@
 
 $inc = include("con_bd_tabla");
 if ($inc) { 
-    $consulta = "SELECT * FROM registro_de_eventos";
+    $consulta = "SELECT * FROM INCIDENTES_LA_CEJA";
     $resultado = mysqli_query($conex,$consulta);
     if ($resultado) {
         while($row = $resultado->fetch_array()){
             $ID = $row ["ID"];
-            $Nombre = $row ["Nombre"];
-            $Telefono = $row ["Telefono"];
-            $Seleccione_Novedad = $row ["Seleccione_Novedad"];
-            $Fecha = $row ["Fecha"];
-            $Hora_Recepcion = $row ["Hora_Recepcion"];
-            $Hora_atencion = $row ["Hora_Atencion"];
-            $Direccion = $row ["Direccion"];
-            $Descripcion = $row ["Descripcion"];
-            $Entidad = $row ["Entidad"];
-            $Operador_Responsable = $row ["Operador_Responsable"];
+            $NOMBRE = $row ["NOMBRE"];
+            $TELEFONO = $row ["TELEFONO"];
+            $EVENTO = $row ["EVENTO"];
+            $FECHA = $row ["FECHA"];
+            $HORA_RECEPCION = $row ["HORA_RECEPCION"];
+            $HORA_ATENCION = $row ["HORA_ATENCION"];
+            $DIRECCION = $row ["DIRECCION"];
+            $DESCRIPCION = $row ["DESCRIPCION"];
+            $ENTIDAD = $row ["ENTIDAD"];
+            $OPERADOR_RESPONSABLE = $row ["OPERADOR_RESPONSABLE"];
                }
     }
 }
@@ -28,15 +28,15 @@ if ($inc) {
                 <div>
                     <p>
                         <b>ID: </b> <?php echo $ID; ?><br>
-                        <b>Telefono : </b> <?php echo $Telefono; ?> <br>
-                        <b>Seleccione_Novedad: </b> <?php echo $Seleccione_Novedad; ?> <br>
-                        <b>Fecha: </b> <?php echo $Fecha; ?> <br>
-                        <b>Hora_Recepcion: </b> <?php echo $Hora_Recepcion; ?><br>
-                        <b>Hora_atencion: </b> <?php echo $Hora_atencion; ?> <br>
-                        <b>Direccion: </b> <?php echo $Direccion; ?> <br>
-                        <b>Descripcion: </b> <?php echo $Descripcion; ?> <br>
-                        <b>Entidad: </b> <?php echo $Entidad; ?> <br>
-                        <b>Operador_Responsable: </b> <?php echo $Operador_Responsable; ?> <br>
+                        <b>Telefono : </b> <?php echo $TELEFONO; ?> <br>
+                        <b>Evento: </b> <?php echo $EVENTO; ?> <br>
+                        <b>Fecha: </b> <?php echo $FECHA; ?> <br>
+                        <b>Hora_Recepcion: </b> <?php echo $HORA_RECEPCION; ?><br>
+                        <b>Hora_atencion: </b> <?php echo $HORA_ATENCION; ?> <br>
+                        <b>Direccion: </b> <?php echo $DIRECCION; ?> <br>
+                        <b>Descripcion: </b> <?php echo $DESCRIPCION; ?> <br>
+                        <b>Entidad: </b> <?php echo $ENTIDAD; ?> <br>
+                        <b>Operador_Responsable: </b> <?php echo $OPERADOR_RESPONSABLE; ?> <br>
                     </p>
                 </div>
             </div>

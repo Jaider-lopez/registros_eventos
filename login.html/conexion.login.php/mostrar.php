@@ -8,7 +8,7 @@ if ($inc) {
         while($row = $resultado->fetch_array()){
             $ID = $row ["ID"];
             $Usuario = $row ["Usuario"];
-            $Contraseña = $row ["Contraseña"];
+            $Contrasena = $row ["Contrasena"];
             
                }
     }
@@ -21,7 +21,7 @@ if ($inc) {
                 <div>
                     <p>
                         <b>ID: </b> <?php echo $ID; ?><br>
-                        <b>Contraseña: </b> <?php echo $Contraseña; ?> <br>
+                        <b>Contraseña: </b> <?php echo $Contrasena; ?> <br>
                         
                     </p>
                 </div>

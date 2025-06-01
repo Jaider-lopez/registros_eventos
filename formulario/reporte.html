@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
     <meta charset="UTF-8">
@@ -9,18 +9,19 @@
 </head>
 
 <body>
+    <nav class="navbar">
     <ul>
-        <a href="/index.html" class="no_underline">Novedades</a>
+        <a href="/novedades/inicio.html" class="no_underline">Novedades</a>
     </ul>
 
-    <form method="post">
+    <form class= "wrapper" method="post">
         <div>
             <H1>REPORTE DIARIO CMC LA CEJA</H1>
             <div class="Novedades">
                 <input type="text" name="Nombre" placeholder="Nombre">
                 <input type="number" name="Telefono" placeholder="Telefono" required>
                 <div class="TipoNovedad">
-                    <select id="SeleccioneNovedad" name="Seleccione_Novedad" style="margin: 50px;"
+                    <select id="SeleccioneNovedad" name="EVENTO" style="margin: 50px;"
                         onchange="MostrarCampo()">
                         <option value="evento">SELECCIONA LA NOVEDAD</option>
                         <!--codigos policiales-->

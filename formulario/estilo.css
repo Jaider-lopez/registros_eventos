@@ -1,6 +1,28 @@
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: url('/images/img.login.jpg');
+    background-size: cover;
+    background-position: center;
+}
+.wrapper{
+    width: 420x;
+    background-color: transparent;
+    border: 2px solid rgba(255, 255, 255, .2);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 15px 20px rgba(0, 0, 0, .2);
+    color: black;
+    border-radius: 10px;
+    padding: 30px 25px;
+}
+
 h1{
     margin: center;
     padding: x;
+    text-align: center;
+    
 }
 
 #eventoManualContainer{
@@ -53,10 +75,11 @@ p{
 }
 
 .buttonguardar{
-    padding: 20px;
+    padding: 15px;
     border-radius: 15px;
     margin-left: 650px;
     cursor: pointer;
     width: 150px;
+    align-items: center;
 
 }
