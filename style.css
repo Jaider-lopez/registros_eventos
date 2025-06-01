@@ -3,7 +3,7 @@ body{
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    background: url('images.html/img.login.jpg');
+    background: url('images/img.login.jpg');
     background-size: cover;
     background-position: center;
 }
