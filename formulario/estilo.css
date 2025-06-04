@@ -77,9 +77,11 @@ p{
 .buttonguardar{
     padding: 15px;
     border-radius: 15px;
-    margin-left: 650px;
+    margin-left: 350px;
     cursor: pointer;
     width: 150px;
     align-items: center;
+    
+
 
 }
