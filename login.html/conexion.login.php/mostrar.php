@@ -11,7 +11,7 @@ include("conexion.bd.php");
     $filas=mysqli_query($resultado);
 
     if($filas) {
-        header("location:inicio.html");
+        header("location:novedades/inicio.html");
     } else {
         include("index.html");
         ?>
