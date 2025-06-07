@@ -18,6 +18,7 @@ include("conexion.bd.php");
         ?>
         <h1>ERROR DE AUTENTIFICACION</h1>
         <?php
+
     mysqli_free_result($resultado);
     mysqli_close($conexion);
     }
