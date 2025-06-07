@@ -2,6 +2,7 @@
 
 include("conexion.bd.php");
 
+
     $Usuario = $_POST ["USUARIO"];
     $Contrasena = $_POST ["CONTRASENA"];
 
@@ -17,6 +18,6 @@ include("conexion.bd.php");
         ?>
         <h1>ERROR DE AUTENTIFICACION</h1>
         <?php
-    }
     mysqli_free_result($resultado);
     mysqli_close($conexion);
+    }
