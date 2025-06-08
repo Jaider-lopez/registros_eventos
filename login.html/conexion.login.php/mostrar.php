@@ -12,9 +12,9 @@ include("conexion.bd.php");
     $filas=mysqli_query($resultado);
 
     if($filas) {
-        header("location:novedades/inicio.html");
+        header("location: login.html/conexion.login.php/mostrar.php");
     } else {
-        include("index.html");
+        include("location: index.html");
         ?>
         <h1>ERROR DE AUTENTIFICACION</h1>
         <?php
