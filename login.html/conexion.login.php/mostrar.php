@@ -1,24 +1,41 @@
 <?php
-
 include("conexion.bd.php");
 
+if (isset($_POST['USUARIO']) && isset($_POST['CONTRASENA'])) {
+    $usuario = $_POST['USUARIO'];
+    $contrasena = $_POST['CONTRASENA'];
 
-    $Usuario = $_POST ["USUARIO"];
-    $Contrasena = $_POST ["CONTRASENA"];
+    // Consulta del usuario
+    $sql = "SELECT contrasena FROM usuarios WHERE usuario = ?";
+    $stmt = $conexion->prepare($sql);
+    $stmt->bind_param("s", $usuario);
+    $stmt->execute();
+    $result = $stmt->get_result();
 
-    $consulta = "SELECT * FROM usuarios where USUARIO = '$Usuario' and CONTRASENA = '$Contrasena' ";
-    $resultado = mysqli_query($conex,$consulta);
-
-    $filas=mysqli_query($resultado);
-
-    if($filas) {
-        header("location: login.html/conexion.login.php/mostrar.php");
+    // Verificar si existe y comparar contraseñas
+    if ($result->num_rows === 1) {
+        $row = $result->fetch_assoc();
+        if (password_verify($contrasena, $row['contrasena'])) {
+            // Autenticación exitosa
+            header("Location: novedades/inicio.html");
+            exit();
+        } else {
+            $error = "⚠️ Contraseña incorrecta.";
+        }
     } else {
-        include("location: index.html");
-        ?>
-        <h1>ERROR DE AUTENTIFICACION</h1>
-        <?php
-
-    mysqli_free_result($resultado);
-    mysqli_close($conexion);
+        $error = "⚠️ Usuario no encontrado.";
     }
+
+    $stmt->close();
+} else {
+    $error = "⚠️ Todos los campos son obligatorios.";
+}
+
+mysqli_close($conexion);
+
+// Mostrar mensaje de error si hay
+if (isset($error)) {
+    include("index.html");
+    echo "<h1 style='color:red;text-align:center;'>$error</h1>";
+}
+?>
