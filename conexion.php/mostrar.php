@@ -1,9 +1,9 @@
 <?php
 
-$inc = include("con_bd_tabla");
+$inc = include("con_bd_tabla.php");
 if ($inc) { 
     $consulta = "SELECT * FROM INCIDENTES_LA_CEJA";
-    $resultado = mysqli_query($conex,$consulta);
+    $resultado = mysqli_query($conexion,$consulta);
     if ($resultado) {
         while($row = $resultado->fetch_array()){
             $ID = $row ["ID"];
