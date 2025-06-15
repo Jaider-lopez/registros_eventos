@@ -1,6 +1,6 @@
 <?php
 
-$inc = include("con_bd_tabla");
+$inc = include("con_bd_tabla.php");
 if ($inc) { 
     $consulta = "SELECT * FROM INCIDENTES_LA_CEJA";
     $resultado = mysqli_query($conex,$consulta);
