@@ -10,7 +10,7 @@
 </head>
 <body>
     <?php
-    include "mostrar.php"
+    include "inicio.php"
     ?>
 
     

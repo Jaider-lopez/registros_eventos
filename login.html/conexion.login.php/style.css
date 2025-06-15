@@ -3,7 +3,7 @@ body{
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    background: url('images/img.login.jpg');
+    background: url('../../images/img.login.jpg');
     background-size: cover;
     background-position: center;
 }
@@ -84,4 +84,13 @@ h1{
     text-decoration: underline;
     
 }
+
+.error-msg {
+    color: red;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 10px;
+    font-size: 18px;
+}
+
     

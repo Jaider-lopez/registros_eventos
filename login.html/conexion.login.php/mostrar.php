@@ -19,7 +19,7 @@ if (isset($_POST['USUARIO']) && isset($_POST['CONTRASENA'])) {
             $row = $result->fetch_assoc();
             if ($contrasena === $row['contrasena']) {
                 // Autenticación exitosa
-                header("Location: novedades/inicio.html");
+                header("Location: /registros_eventos/conexion.php/novedades/inicio.php");
                 exit();
             } else {
                 $error = "⚠️ Contraseña incorrecta.";
@@ -40,7 +40,7 @@ mysqli_close($conexion);
 
 // Mostrar mensaje de error si hay
 if (isset($error)) {
-    include("index.html");
-    echo "<h1 style='color:red;text-align:center;'>$error</h1>";
-}
+    include("index.php");
+    }
+    
 ?>

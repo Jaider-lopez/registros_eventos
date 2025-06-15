@@ -1,25 +1,53 @@
+<?php
+include("../conexion.php/novedades/con_bd_tabla.php");
+
+if ($_SERVER['REQUEST_METHOD'] == "POST") {
+    $nombre = $_POST['NOMBRE'] ?? '';
+    $telefono = $_POST['TELEFONO'] ?? '';
+    $evento = ($_POST['EVENTO'] ?? '') == "Otro" ? ($_POST["eventoManual"] ?? '') : ($_POST["EVENTO"] ?? '');
+    $fecha = $_POST['FECHA'] ?? '';
+    $hora_recepcion = $_POST['HORA_RECEPCION'] ?? '';
+    $hora_atencion = $_POST['HORA_ATENCION'] ?? '';
+    $direccion = $_POST['DIRECCION'] ?? '';
+    $descripcion = $_POST['DESCRIPCION'] ?? '';
+    $entidad = $_POST['ENTIDAD'] ?? '';
+    $operador_responsable = $_POST['OPERADOR_RESPONSABLE'] ?? '';
+
+    $sql = "INSERT INTO registro_de_eventos 
+        (NOMBRE, TELEFONO, EVENTO, FECHA, `HORA_RECEPCION`, `HORA_ATENCION`, DIRECCION, DESCRIPCION, ENTIDAD, `OPERADOR_RESPONSABLE`)
+        VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
+
+    $stmt = mysqli_prepare($conexion, $sql);
+
+    if ($stmt) {
+        mysqli_stmt_bind_param($stmt, "ssssssssss", $nombre, $telefono, $evento, $fecha, $hora_recepcion, $hora_atencion, $direccion, $descripcion, $entidad, $operador_responsable);
+        mysqli_stmt_execute($stmt);
+        mysqli_stmt_close($stmt);
+        mysqli_close($conexion);
+        header("Location: /registros_eventos/conexion.php/novedades/inicio.php");
+        exit();
+    } else {
+        echo "Error al preparar la consulta: " . mysqli_error($conexion);
+    }
+}
+?>
+
+
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Novedades La Ceja</title>
     <link rel="stylesheet" href="estilo.css">
 </head>
-
 <body>
-    <nav class="navbar">
-    <ul>
-        <a href="/novedades/inicio.html" class="no_underline">Novedades</a>
-    </ul>
-
     <form class= "wrapper" method="post">
         <div>
             <H1>REPORTE DIARIO CMC LA CEJA</H1>
             <div class="Novedades">
-                <input type="text" name="Nombre" placeholder="Nombre">
-                <input type="number" name="Telefono" placeholder="Telefono" required>
+                <input type="text" name="NOMBRE" placeholder="Nombre">
+                <input type="number" name="TELEFONO" placeholder="TELEFONO" required>
                 <div class="TipoNovedad">
                     <select id="SeleccioneNovedad" name="EVENTO" style="margin: 50px;"
                         onchange="MostrarCampo()">
@@ -75,22 +103,22 @@
                             style="width: auto; margin: auto; width: 400px;" placeholder="Nombre del evento">
                     </div>
                     <br>
-                    <input type="date" name="Hora_Recepcion">
+                    <input type="date" name="FECHA">
                     <p>Hora Recepcion De Llamada</p>
-                    <input type="time" name="Hora_Atencion">
+                    <input type="time" name="HORA_RECEPCION">
                     <p>Hora Atencion Del Evento</p>
-                    <input type="time">
+                    <input type="time" name="HORA_ATENCION">
                     <p>Direccion</p>
-                    <input type="text" name="Direccion" placeholder="Direccion" required>
+                    <input type="text" name="DIRECCION" placeholder="Direccion" required>
                     <p>Descripcion</p>
-                    <div class="form input"> <textarea placeholder="Describe El Caso" required></textarea></div>
-                    <input type="text" name="nombre" placeholder="Atendido Por" required>
-                    <input type="text" name="nombre" placeholder="Operador Responsable" required>
+                    <div class="form input"> <textarea name="DESCRIPCION" placeholder="Describe El Caso" required></textarea></div>
+                    <input type="text" name="ENTIDAD" placeholder="Atendido Por" required>
+                    <input type="text" name="OPERADOR_RESPONSABLE" placeholder="Operador Responsable" required>
 
                 </div>
             </div>
         </div>
-        <button class="buttonguardar">GUARDAR</button>
+        <button type=submit class="buttonguardar">GUARDAR</button>
     </form>
     <script>
         function MostrarCampo() {
@@ -110,5 +138,3 @@
     </script>
 
 </body>
-
-</html>
