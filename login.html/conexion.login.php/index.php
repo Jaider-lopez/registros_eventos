@@ -30,10 +30,6 @@
 
     <input name="btningresar" class="btn" type="submit" value="Iniciar Sesión">
     <button type="submit" class="btn">Registrarse</button>
-
-    <div class="remember">
-        <a href="#">¿Olvidaste tu contraseña?</a>
-    </div>
 </form>
 
     </div>
